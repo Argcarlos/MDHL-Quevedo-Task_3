@@ -21,7 +21,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  padding: bottom 50px;
+  padding: 0;
   color: var(--background1);
 }
 
@@ -39,7 +39,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 
 }
 
@@ -48,7 +48,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav .container .text-logo{
@@ -57,7 +57,7 @@ body {
   align-items: center;
   padding: 20px 0;
   color: var(--background3);
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
   font-size: 45px;
   margin: -35px;
 }
@@ -73,7 +73,7 @@ body {
   color: var(--background1);
   text-decoration: none;
   padding: 7px 15px;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav.active{
@@ -133,13 +133,13 @@ h2 {
   color: white;
 }
 */
-.content h2, .content h3{
+.home-content h2, .home-content h3{
   font-size: 150%;
   color: green;
   margin: 10px 0;
 }
 
-.content p {
+.home-content p {
   color:#243763;
   line-height: 30px;
   font-size: 25px;
@@ -155,16 +155,29 @@ h2 {
   z-index: 10;
 
 }
+/*------- Home content--------------*/
 
-.social-bar {
+.home-container{
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 10;
+  height: 100vh;
+}
+
+.home-container .social-bar {
   position: relative;
   top: 50px;
   left: 10px;
   align-items: center;
   justify-content: center;
+  width: 150px;
+  font-size: 15px;
 }
 
-.social-bar ul{
+.home-container .social-bar ul{
   position: relative;
   top: 30px;
   left: 10px;
@@ -173,47 +186,85 @@ h2 {
   line-height: 5;
 }
 
-
-
-.social-bar a {
-  display: flex-start;
+.home-container .social-bar a {
   transform: scale(0.5);
   list-style-type: none;
   margin: 0;
   padding: 0;
-
-}
-
-main{
-  margin-top: 25px;
-  margin-left: 25px;
-  padding: 1px 16px;
-  height: 1000px;
 }
 
 .home-content{
-  margin-left: 25%;
-  padding: 1px 16px;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  margin: 50px;
+  position: relative;
+  z-index: 10;
+  line-height: 2;
+  width: 150%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/hockey_1.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/hockey_2.jpg");
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-content li{
+  display: flex;
+  line-height: 2;
+  list-style-type: none;
+}
+
+.home-content li a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
-
+/*------- Footer--------------*/
 footer{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   position: relative;
-  bottom: 0;
+  background-color: var(--background2);
+  height: 50px;
+  top: 0;
   left: 0;
-  font-size: 30px;
-  background-color: var(--secondary-color)
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+
 }
 
 .footer-container {
-  max-height: 100%;
-  max-width: 100%;
-  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-container ul{
+  list-style-type: none;
+  margin: 0;
+  color:var(var(--background7));
+}
+
+.footer-container ul li{
+  display: inline-block;
+  margin-right: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container a{
+  color: var(--background1);
+  text-decoration: none;
+  padding: 7px 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-container a:hover{
+  color: var(--background7);
 }
 
 .table{
