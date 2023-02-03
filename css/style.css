@@ -1,92 +1,205 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
-
 :root{
   --primary-color: #CC0000;
   --secondary-color: #00468B;
-  --background3: #FFB819;
+  
   --background1: #111111;
-  --background2: #001425;
+  --background2: #00425A;
+  --background3: #FFB819;
+  --background4:#1F8A70;
+  --background5: #BFDB38;
+  --background6: #FC7300;
   }
+
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-body, html {
-  height: 100%;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: bottom 50px;
+  color: var(--background1);
 }
-.banner{
+
+.container{
+  display: flex;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Nav--------------------------------*/
+.nav{
+  position: relative;
+  background-color: var(--background2);
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3 ease-in-out;
+
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  transition: all 0.3 ease-in-out;
+}
+
+.nav .container .text-logo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  color: var(--background3);
+  transition: all 0.3 ease-in-out;
+  font-size: 45px;
+  margin: -20px;
+}
+
+
+.nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav a {
+  color: var(--background1);
+  text-decoration: none;
+  padding: 7px 15px;
+  transition: all 0.3 ease-in-out;
+}
+
+.nav.active{
+  background-color: var(--background5);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.nav.active a{
+  color: var(--background1);
+}
+.nav.active container{
+  padding: 10px 0;
+}
+.nav a.current, .nav a:hover {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+
+.banner{
   padding: 25px;
 	width: 100%;
-	border-radius: 5px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/design1_image1.jpg");
-  height: 50%;
+  height: 60vh;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
   position: relative;
+  color: var(--background3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+  margin-bottom: 20px;
+}
+/*
+.menu-bar{
+  background-color: black;
+  text-align: center;
+  font-size: 25px;
+  position: sticky;
 }
 
+*/
 h1{
-  font-size: 60px;
-  font-family: 'Roboto',sans-serif;
-  color: white;
+  font-size: 45px;
+  margin: -20px;
+  
 }
-
+/*
 h2 {
   color: blue;
   position: inherit;
   color: white;
 }
-
-h3{
-  font-size: 35px;
+*/
+.content h2, .content h3{
+  font-size: 150%;
   color: green;
+  margin: 10px 0;
 }
 
-p {
+.content p {
   color:#243763;
+  line-height: 30px;
   font-size: 25px;
+  letter-spacing: 1.5px;
 }
+
+
+
 .logo {
   height: 250px;
-  transform: translate(150%, 35%);
+  transform: translate(150%, 45%);
   position: relative;
   top: 50%;
   left: 50%;
 
 }
+/*
+.navigation {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  width: 150%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--secondary-color);
+}
 
-ul {
+.navigation.active {
+  left: 0;
+}
+
+.navigation ul {
+  position: relative;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 25%;
-  background-color: #f1f1f1;
-  position:absolute;
-  height: fit-content;
-  overflow: auto;
+  overflow: hidden;
 }
 
-li a {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
+.navigation ul li {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  list-style: none;
+  text-align: center;
+
+}
+
+.navigation ul li a {
+  font-size: 2.2rem;
+  color: #111;
   text-decoration: none;
+  font-weight: 100;
 }
 
-li a.active {
-  background-color: var(--logo-background2);
-  color: white;
+.navigation ul li a:hover {
+  color: var(--primary-color);
 }
-
-li a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
-
+/*----------------------------------------------------------------
 .navigation .social-bar {
   position: absolute;
   top: 0;
@@ -102,6 +215,7 @@ li a:hover:not(.active) {
   display: inline-block;
   transform: scale(0.5);
 }
+
 main{
   margin-top: 25px;
   margin-left: 25px;
@@ -115,11 +229,7 @@ main{
   height: 100%;
 }
 
-.menu{
-  background-color: black;
-  text-align: center;
-  font-size: 25px;
-}
+
 
 footer{
   display: flex;
