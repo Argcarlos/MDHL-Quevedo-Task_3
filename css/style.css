@@ -267,13 +267,20 @@ footer{
   color: var(--background7);
 }
 
-.table{
+.home-content .table{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
   background-color: var(--secondary-color);
-  height: 50vh;
-  width: 40rem;
+  height: 20vh;
+  width: 100px;
+  justify-content: center;
+  table-layout: auto;
 }
 
-.table, th, td, tr{
-  border: 2px solid var(--secondary-color);
+.home-content .table, th, td, tr{
+  border: 1px solid var(--secondary-color);
+  border-spacing: 0;
 }
 
